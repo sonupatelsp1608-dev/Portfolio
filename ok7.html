@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonu Patel | Portfolio</title>
+  <meta name="description" content="Sonu Patel - Python Developer | Web Developer | Portfolio Website" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      background: rgba(15,23,42,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #1e293b;
+    }
+
+     #typing {
+    color: #38bdf8;
+    font-weight: 600;
+     font-size: 22px;
+     }
+    .cursor {
+  display: inline-block;
+  margin-left: 5px;
+  color: #38bdf8;
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+    .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo { font-size: 22px; font-weight: 700; color: #38bdf8; }
+    nav a { margin-left: 20px; font-weight: 500; }
+    nav a:hover { color: #38bdf8; }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap:"40px;
+      padding: 80px 0;
+    }
+    .hero-text { max-width: 600px; }
+    .hero-text h1 { font-size: 42px; margin-bottom: 10px; }
+    .hero-text span { color: #38bdf8; }
+    .hero-text p { color: #cbd5f5; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    .btn:hover { background: #0ea5e9; }
+
+    .section { padding: 70px 0; }
+    .section h2 { text-align: center; margin-bottom: 40px; font-size: 32px; color: #38bdf8; }
+
+    .about, .skills, .projects, .contact { text-align: center; }
+
+    .skills-list, .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+
+    .contact form { max-width: 500px; margin: auto; }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    footer {
+      background: #020617;
+      padding: 20px 0;
+      text-align: center;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+
+    @media(max-width:768px){
+      .hero { text-align: center; }
+      .hero-text h1 { font-size: 32px; }
+    } 
+   .hero-img img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  animation: float 3s ease-in-out infinite;
+
+}
+
+@media(max-width:768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 25px;
+  }
+}
+    .social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 22px;
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+ .social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 24px;       /* icon size */
+  color: #38bdf8;        /* yaha apna desired color daalo */
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0ea5e9;        /* hover color */
+  transform: translateY(-3px);
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Sonu Patel</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container" id="home">
+  <div class="hero-text">
+    <h1>Hii, I'm <span>Sonu Patel</span></h1>
+    <h3><span id="typing"></span><span class="cursor">|</span></h3>
+    <p>I am a passionate developer learning Python, Flask, SQL and Web Development. I love building projects and improving my skills every day.</p>
+    <a href="#projects" class="btn">View My Work</a>
+   <div class="social-icons">
+  <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/sonu-patel-44592231a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/mr_sonu_pate1?igsh=NHBrYTZldG9rNGRt" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+  </div>
+
+  <div class="hero-img">
+    <img src="sonu.jpg" alt="Sonu Patel">
+  </div>
+</section>
+
+<section class="section about container" id="about">
+  <h2>About Me</h2>
+  <p>I am Sonu Patel, a Bsc IT student with a passion for coding and problem-solving. My journey in the world of technology has been exciting, filled with challenges and continuous learning. I enjoy bringing ideas to life through Software Developer and exploring various technologies.</p>
+</section>
+
+<section class="section skills container" id="skills">
+  <h2>Skills</h2>
+  <div class="skills-list">
+    <div class="card">Python</div>
+    <div class="card">Flask</div>
+    <div class="card">SQL / MySQL</div>
+    <div class="card">HTML & CSS</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">Basic JavaScript</div>
+  </div>
+</section>
+
+<section class="section projects container" id="projects">
+  <h2>Projects</h2>
+  <div class="projects-list">
+    <div class="card">
+      <h3>Smart Dustbin Project</h3>
+      <p>IoT based dustbin using ultrasonic sensor, moisture sensor, servo motor and buzzer.</p>
+    </div>
+    <div class="card">
+      <h3>Flask Web App</h3>
+      <p>Basic Flask application with routing and templates.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Personal responsive portfolio website using HTML & CSS.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section contact container" id="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Sonu Patel | All Rights Reserved</p>
+</footer>
+<script>
+  const textArray = ["Python Developer", "Flask Developer", "Web Developer"];
+  let textIndex = 0;
+  let charIndex = 0;
+
+  function typingEffect() {
+    if (charIndex < textArray[textIndex].length) {
+      document.getElementById("typing").innerHTML += textArray[textIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typingEffect, 100);
+    } else {
+      setTimeout(eraseEffect, 1500);
+    }
+  }
+
+  function eraseEffect() {
+    if (charIndex > 0) {
+      document.getElementById("typing").innerHTML =
+        textArray[textIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseEffect, 60);
+    } else {
+      textIndex++;
+      if (textIndex >= textArray.length) textIndex = 0;
+      setTimeout(typingEffect, 300);
+    }
+  }
+
+  typingEffect();
+</script>
+
+</body>
+</html>
